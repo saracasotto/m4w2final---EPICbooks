@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Mulish", sans-serif;
+}
+
+.body {
+    background-color: #EBF2FA;
+}
+
+.navbar,
+#buyCart {
+    background-color: #002B5B;
+}
+
+@media (min-width:767px) {
+#navbarNavDropdown {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+}
+
+.navbar i,
+.navbar-brand,
+.nav-item a,
+.navbar-brand:hover,
+.card .btn,
+#emptyCart,
+#buyCart{
+    color: #FFFFFF;
+    font-family: "Space Mono", monospace;
+}
+
+#navbarNavDropdown{
+    padding: 1em 0;
+}
+
+@media (max-width:766px) {
+#navbarNavDropdown #searchInput{
+    max-width: 50%;
+}
+}
+
+#navbarNavDropdown .nav-item,
+.offcanvas-body .list-group-item p,
+.card-text{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar #searchInput,
+.card{
+    border: none;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+
+.card {
+    background-color: transparent;
+    margin-bottom: 1em;
+}
+
+.card .card-img-top {
+    height: 250px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+.card-title {
+    color: #333333;
+    font-size: 0.9em;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+.card-text {
+    color: #32CD32;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.card .btn{
+    background-color: #FFA500;
+    font-size: 0.9em;
+}
+
+.card .btn:hover{
+    background-color: #FF8C00;
+}
+
+.offcanvas {
+    background-color: #F5F5F5;
+}
+
+.offcanvas-title {
+    color: #002B5B;
+}
+
+.offcanvas-body .list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    text-align: end;
+    background-color: transparent;
+}
+
+.offcanvas-body .list-group-item p:first-of-type{
+    color: #666666;
+    font-weight: 600;
+    padding-left: 2em;
+}
+
+.offcanvas-body .list-group-item p:last-of-type{
+    color:#32CD32;
+    font-weight: 700;
+
+}
+
+.offcanvas-body .btn.remove-from-cart{
+    background-color: transparent;
+    padding: 0;
+    font-size: 0.9em;
+}
+
+#emptyCart {
+    font-size: 0.7em;
+    background-color: #FF4500;
+}
+
+#emptyCart:hover{
+    background-color: #D93B00;
+}
+
+#buyCart{
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#buyCart:hover{
+    background-color: #004080;
+}

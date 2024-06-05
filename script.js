@@ -30,7 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="card-body">
                         <h5 class="card-title">${book.title}</h5>
                         <p class="card-text">${book.price.toFixed(2)}€</p>
+                        <p class="card-text"><small class="text-muted">Book Code: ${book.asin}</small></p>
                         <button class="btn add-to-cart">Add to Cart</button>
+                        <button class="btn skip-book">Skip</button>
+                        <br><a href="details.html?id=${book.asin}" target="_blank">More details</a>
                     </div>
                 </div>
             `;
@@ -39,6 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
             bookCard.querySelector('.add-to-cart').addEventListener('click', () => {
                 addToCart(book);
                 bookCard.querySelector('.card').classList.add('card-added');
+            });
+
+            bookCard.querySelector('.skip-book').addEventListener('click', () => {
+                bookCard.style.display = 'none';  //book display none
             });
         });
     }
@@ -86,11 +93,15 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCart();
     });
 
-    // Search books
     searchInput.addEventListener('input', () => {
         const searchText = searchInput.value.toLowerCase();
         const filteredBooks = books.filter(book => book.title.toLowerCase().includes(searchText));
-        renderBooks(filteredBooks);
+        
+        if (filteredBooks.length > 0) {
+            renderBooks(filteredBooks);
+        } else {
+            bookList.innerHTML = '<p>No results</p>';
+        }
     });
 
     // Update total price

@@ -95,13 +95,24 @@
     margin-bottom: 0.5em;
 }
 
-.card .btn{
+.card .btn:first-of-type{
     background-color: #FFA500;
     font-size: 0.9em;
 }
 
-.card .btn:hover{
+.card .btn:first-of-type:hover{
     background-color: #FF8C00;
+}
+
+.card .btn:last-of-type{
+    background-color: transparent;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #333333;
+}
+
+.card a {
+    text-decoration: none;
 }
 
 .offcanvas {
@@ -155,4 +166,19 @@
 
 #buyCart:hover{
     background-color: #004080;
+}
+
+/*DETAILS PAGE*/
+
+
+#book-title {
+    font-size: 2.5em;
+}
+
+#book-price {
+    font-size: 2em;
+}
+
+#book-image {
+    height: 500px;
 }
